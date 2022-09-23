@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="113.5" height="113.5" viewBox="0 0 113.5 113.5">
+  <g id="_103512_cancel_text_document_icon" data-name="103512_cancel_text_document_icon" transform="translate(0.5)">
+    <g id="background">
+      <rect id="Rectangle_5471" data-name="Rectangle 5471" width="113" height="113" transform="translate(-0.5 0.5)" fill="none"/>
+    </g>
+    <g id="document_x5F_text_x5F_cancel">
+      <path id="Path_38391" data-name="Path 38391" d="M84.75,49.646V19.719L65.024,0H0V113H84.75v-.208a31.768,31.768,0,0,0,0-63.146ZM63.555,8.521l12.67,12.667H63.555V8.521ZM7.063,105.938V7.055H56.5V28.246H77.688v21.4A31.628,31.628,0,0,0,61.26,56.5H14.125v7.063H54.794a31.612,31.612,0,0,0-3.51,7.063H14.125v7.063H49.646a31.558,31.558,0,0,0,11.618,28.25Zm74.156-.413a24.309,24.309,0,1,1,24.306-24.306A24.359,24.359,0,0,1,81.219,105.524ZM70.625,42.375h-56.5v7.063h56.5Z" fill="#f85e60"/>
+      <path id="Path_38392" data-name="Path 38392" d="M19,40.188l7.063,7.063,7.063-7.062,7.063,7.063,7.063-7.062-7.062-7.062,7.063-7.062L40.188,19l-7.062,7.063L26.063,19,19,26.063l7.063,7.063Z" transform="translate(48.094 48.094)" fill="#f85e60"/>
+    </g>
+  </g>
+</svg>

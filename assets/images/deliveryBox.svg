@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="29" height="28" viewBox="0 0 29 28">
+  <g id="Box_Icon" data-name="Box Icon" transform="translate(0 0.223)">
+    <rect id="bound" width="29" height="28" transform="translate(0 -0.223)" fill="none"/>
+    <path id="Combined_Shape" data-name="Combined Shape" d="M20.932,4.379a1.2,1.2,0,0,1,.714,1.1V16.015a1.2,1.2,0,0,1-.619,1.051l-9.621,5.345a1.2,1.2,0,0,1-1.168,0L.619,17.066A1.2,1.2,0,0,1,0,16.015V5.478a1.2,1.2,0,0,1,.714-1.1L10.335.1a1.2,1.2,0,0,1,.977,0Z" transform="translate(3.608 3.308)" fill="#f85e60"/>
+    <path id="Combined_Shape_Copy" data-name="Combined Shape Copy" d="M8.86,0,0,4.922V10.44l2.405,1.2V6.337l9.206-5.114Z" transform="translate(9.14 4.667)" fill="#fff"/>
+  </g>
+</svg>
