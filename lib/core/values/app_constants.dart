@@ -10,10 +10,8 @@ class AppConstants {
   static const List<String> userRoles = [
     'Hotel Owner',
     'Client',
-    'Hotel Manager',
     'Hotel Finance',
     'Hotel Receptionist',
-    'Hotel IT',
   ];
   static const List<String> status = [
     "Available",

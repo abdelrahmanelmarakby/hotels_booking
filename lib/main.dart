@@ -9,7 +9,7 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   Get.put(AppDataBase());
   try {
-    /* await Get.find<AppDataBase>().insertUser(User(
+    await Get.find<AppDataBase>().insertUser(User(
         id: 150,
         name: "Admin Test",
         email: "admin@gmail.com",
@@ -17,7 +17,7 @@ void main() async {
         phone: "01019706842",
         image: "",
         role: AppConstants.userRoles[0],
-        status: "Active"));*/
+        status: "Active"));
   } catch (e) {
     print(e);
   }

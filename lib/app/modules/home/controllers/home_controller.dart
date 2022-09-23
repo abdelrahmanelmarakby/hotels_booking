@@ -1,11 +1,18 @@
 import 'dart:math';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter_lorem/flutter_lorem.dart';
 
 import 'package:get/get.dart';
 import 'package:hotels_booking/app/data/local_data_source/sqlite_database.dart';
+import 'package:hotels_booking/app/routes/app_pages.dart';
+import 'package:hotels_booking/core/resourses/color_manager.dart';
 import 'package:hotels_booking/core/values/app_constants.dart';
 
 class HomeController extends GetxController {
+  TextEditingController password = TextEditingController();
+
+  TextEditingController email = TextEditingController();
+
   Future<void> generateHotels() async {
     await Get.find<AppDataBase>().deleteAllHotels();
     for (int i = 0; i < 10; i++) {
@@ -81,8 +88,8 @@ class HomeController extends GetxController {
           id: i,
           name: AppConstants
               .hotelNames[Random().nextInt(AppConstants.hotelNames.length)],
-          email: '  ',
-          password: '  ',
+          email: '$i',
+          password: '$i',
           phone: '  ',
           role: AppConstants
               .userRoles[Random().nextInt(AppConstants.userRoles.length)],
@@ -99,12 +106,32 @@ class HomeController extends GetxController {
           id: i,
           name: AppConstants
               .hotelNames[Random().nextInt(AppConstants.hotelNames.length)],
-          email: '  ',
-          password: '  ',
+          email: '$i',
+          password: '$i',
           phone: '  ',
           image: AppConstants
               .hotelImages[Random().nextInt(AppConstants.hotelImages.length)],
           status: "Available"));
     }
+  }
+
+  Future<String?> login(email, password) async {
+    Get.find<AppDataBase>().loginUser(email, password).then((value) {
+      print(value.toString());
+      Get.close(1);
+      if (value?.role == "Client") {
+        return Get.snackbar(
+            "Invalid permissions", "you are not permitted to see this data",
+            backgroundColor: ColorsManger.error, colorText: ColorsManger.grey1);
+      }
+      value != null
+          ? Get.toNamed(Routes.DASHBOARD, arguments: value.role)
+          : Get.snackbar(
+              "Invalid credentials", "email or password are not correct",
+              backgroundColor: ColorsManger.error,
+              colorText: ColorsManger.grey1);
+
+      return value?.role;
+    });
   }
 }

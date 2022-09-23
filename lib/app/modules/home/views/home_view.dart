@@ -32,8 +32,69 @@ class HomeView extends GetView<HomeController> {
               children: [
                 const SizedBox(width: AppSize.size20),
                 ElevatedButton(
+                  onPressed: () async {
+                    Get.dialog(
+                      AlertDialog(
+                        title: Column(children: [
+                          //Login form
+
+                          Text(
+                            'Login',
+                            style: getBoldTextStyle(
+                                fontSize: FontSize.xlarge,
+                                color: ColorsManger.black),
+                          ),
+                          const SizedBox(
+                            height: 20,
+                          ),
+
+                          TextFormField(
+                            controller: controller.email,
+                            decoration: InputDecoration(
+                                hintText: 'Email',
+                                hintStyle: getRegularTextStyle(
+                                    fontSize: FontSize.medium,
+                                    color: ColorsManger.grey),
+                                border: OutlineInputBorder(
+                                    borderRadius: BorderRadius.circular(10))),
+                          ),
+                          const SizedBox(
+                            height: 20,
+                          ),
+                          TextFormField(
+                            controller: controller.password,
+                            decoration: InputDecoration(
+                                hintText: 'Password',
+                                hintStyle: getRegularTextStyle(
+                                    fontSize: FontSize.medium,
+                                    color: ColorsManger.grey),
+                                border: OutlineInputBorder(
+                                    borderRadius: BorderRadius.circular(10))),
+                          ),
+                          const SizedBox(
+                            height: 20,
+                          ),
+                          ElevatedButton(
+                              onPressed: () async {
+                                controller.login(controller.email.text,
+                                    controller.password.text);
+                              },
+                              child: Text(
+                                "Login",
+                                style: getMediumTextStyle(
+                                    fontSize: FontSize.large,
+                                    color: Colors.white),
+                              ))
+                        ]),
+                      ),
+                    );
+                  },
+                  child: const Text('Open Dashboard'),
+                ),
+                const SizedBox(width: AppSize.size20),
+                ElevatedButton(
                   onPressed: () async => controller.generateHotels(),
-                  child: const Text('Insert 100 Hotels'),
+                  child: const Text('Insert 10 Hotels'),
                 ),
                 const SizedBox(width: AppSize.size20),
                 ElevatedButton(
