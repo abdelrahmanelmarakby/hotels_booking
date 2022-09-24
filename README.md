@@ -3,6 +3,7 @@
 A hotels booking app built with flutter project.
 
 used <a url="https://pub.dev/packages/drift">Drift(previously moor)</a> to generate Sqflite code and Generete model classes
+and GetX as a State mangement.
 
 
 ## Getting Started
