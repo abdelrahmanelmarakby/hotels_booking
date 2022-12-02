@@ -20,6 +20,7 @@ class _MyAppState extends State<MyApp> {
     return GetMaterialApp(
       title: 'Initium Hotels',
       theme: Themes.light,
+      defaultTransition: Transition.fadeIn,
       darkTheme: Themes.dark,
       themeMode: ThemeService().theme,
       debugShowCheckedModeBanner: false,
@@ -31,6 +32,7 @@ class _MyAppState extends State<MyApp> {
         child = MediaQuery(
           data: MediaQuery.of(context).copyWith(textScaleFactor: 1.0),
           child: botToastBuilder(context, child),
+          
         );
         ResponsiveWrapper.builder(
           ClampingScrollWrapper.builder(context, widget),
